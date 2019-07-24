@@ -17,23 +17,23 @@ pipeline {
  }
 
  environment {
-    PR_WORKSPACE_DIRECTORY = "${env.JENKINS_HOME}/jobs/kobiton/jobs/${repo}/branches/PR-${number}"
+    PR_WORKSPACE_DIRECTORY = "${env.JENKINS_HOME}/jobs/kobiton/jobs/${env.repo}/branches/PR-${env.number}"
  }
 
   stages {
     stage('Removing PR-$number $action in workspace') {
         steps {
             script {
-
                 if (repo == "booster-automated-execution-runner") {
-                    PR_WORKSPACE_DIRECTORY = "${env.JENKINS_HOME}/jobs/kobiton/jobs/booster-auto.1vadu4.ution-runner/branches/PR-${number}"
+                    PR_WORKSPACE_DIRECTORY = "${env.JENKINS_HOME}/jobs/kobiton/jobs/booster-auto.1vadu4.ution-runner/branches/PR-${env.number}"
                 }
 
                 if (fileExists(env.PR_WORKSPACE_DIRECTORY)) {
                     dir("${env.PR_WORKSPACE_DIRECTORY}")
                     {
-                        deleteDir()
-                        echo "PR-${env.number} in ${repo} has been cleaned"
+                        //deleteDir()
+                        echo "Removed at ${env.PR_WORKSPACE_DIRECTORY}"
+                        //echo "PR-${env.number} in ${env.repo} has been cleaned"
                     }
                 }
                 else {

@@ -32,7 +32,7 @@
 
 ## Step 4
 - Add webhook in your Github repositories.
-- Payload URL: `https://ci.kobiton.com/generic-webhook-trigger/invoke?token=TriggerPR` (You can change other token parameter in Jenkins configuration as [Step 3](#step-3)).
+- Payload URL: `https://ci.kobiton.com/generic-webhook-trigger/invoke?token=TriggerPR` (You can change to other token parameter in Jenkins configuration as [Step 3](#step-3)).
 - Content type: `application/json`.
 - Check `Active` option.
 
