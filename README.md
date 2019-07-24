@@ -1,4 +1,4 @@
-#Jenkins job triggers closed PR webhook from Github
+# Jenkins job triggers closed PR webhook from Github
 
 ## Step 1
 - In order to trigger a webhook from Github, we have to install [Generic Webhook Trigger Plugin](https://wiki.jenkins.io/display/JENKINS/Generic+Webhook+Trigger+Plugin).
@@ -38,6 +38,6 @@
 
 ![Step 4-1](/img/step4-1.png)
 
-- Choose only `Pull request` option in `Let me select individual events`.
+- Choose only `Pull requests` option in `Let me select individual events`.
 
 ![Step 4-2](/img/step4-2.png)
