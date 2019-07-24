@@ -17,7 +17,7 @@ pipeline {
  }
 
  environment {
-    PR_WORKSPACE_DIRECTORY = "${env.JENKINS_HOME}/jobs/kobiton/jobs/${env.repo}/branches/PR-${env.number}"
+    PR_WORKSPACE_DIRECTORY = "${env.JENKINS_HOME}/jobs/kobiton/jobs/${repo}/branches/PR-${number}"
  }
 
   stages {
@@ -25,7 +25,7 @@ pipeline {
         steps {
             script {
                 if (repo == "booster-automated-execution-runner") {
-                    PR_WORKSPACE_DIRECTORY = "${env.JENKINS_HOME}/jobs/kobiton/jobs/booster-auto.1vadu4.ution-runner/branches/PR-${env.number}"
+                    PR_WORKSPACE_DIRECTORY = "${env.JENKINS_HOME}/jobs/kobiton/jobs/booster-auto.1vadu4.ution-runner/branches/PR-${number}"
                 }
 
                 if (fileExists(env.PR_WORKSPACE_DIRECTORY)) {
