@@ -2,6 +2,7 @@
 
 ## Step 1
 - In order to trigger a webhook from Github, we have to install [Generic Webhook Trigger Plugin](https://wiki.jenkins.io/display/JENKINS/Generic+Webhook+Trigger+Plugin).
+- Installing [Pipeline Utility Steps](https://jenkins.io/doc/pipeline/steps/pipeline-utility-steps/) to parse JSON string.
 
 ## Step 2
 - Create a pipeline job.
