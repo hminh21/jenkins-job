@@ -1,6 +1,6 @@
 pipeline {
   agent { 
-      label "labelName" 
+      label any
     }
  triggers {
     GenericTrigger(
@@ -51,7 +51,7 @@ pipeline {
           script {
               withCredentials([string(credentialsId: '0f35f85f-d840-4caa-b49c-0ed13605a301', variable: 'API_TOKEN')]) {
              //Get Jenkins-Crumb
-             resJson = sh(script: "curl -s -u hminh21:${API_TOKEN} https://a27a5fef.ngrok.io/crumbIssuer/api/json", returnStdout: true)
+             resJson = sh(script: "curl -s -u hminh21:${API_TOKEN} https://665d4b32.ngrok.io/crumbIssuer/api/json", returnStdout: true)
              def res = readJSON text: resJson
              
              //Do delete job in jenkins
